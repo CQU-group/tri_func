@@ -34,10 +34,7 @@ def csc_t(x):
 # 计算sec
 def sec_t(x):
     return round(float(1)/math.cos(x), 10)
-# 计算机倒数
-def reciprocal(value):
-    value = round(float(1) / (float(value)), 10)
-    return value
+
 
 #运算符按钮
 #第一行
@@ -176,6 +173,8 @@ def buttonClick(btn):
                     content = content.replace('×', '*')
                 elif operat == '^':
                     content = content.replace('^', '**')
+            value = eval(content)
+            content = str(round(value,10))
             strsin = r'sin\(\d+\)|sin\(\-?\d+\.\d+\)'
             if 'sin' in content:
                 m = re.search(strsin, content)
