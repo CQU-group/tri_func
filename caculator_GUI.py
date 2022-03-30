@@ -3,7 +3,7 @@ import os,sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(BASE_DIR)
 
-from caculate import caculator   #导入计算模块（包含三角函数+四则运算功能）
+from caculate import caculator
 
 # 主窗口
 root = TK.Tk( )   #创建TK事例
@@ -57,9 +57,9 @@ def run( ):
     temp = temp.replace('arct', '^')
     temp = temp.replace('Π', '180')
 
-    # 写一个小彩蛋，CQUer！
+    # 写一个小彩蛋，可以用于表白哦
     if temp == '王云;冯雪;苏舣;秦弦;袁慧敏':               # 暗号
-        result.set('现代软件工程，我爱你!')               # 彩蛋
+        result.set('现代软件工程，我爱你!')               # 彩蛋或者表白语
         return 0
     print(temp)
     answer = caculator.caculator(temp)
