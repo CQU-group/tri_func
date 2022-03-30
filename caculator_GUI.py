@@ -63,7 +63,7 @@ def run( ):
         return 0
     print(temp)
     answer = caculator.caculator(temp)
-    answer = '%.2f'%answer
+    #answer = '%.2f'%answer
     result.set(str(answer))
 
 
