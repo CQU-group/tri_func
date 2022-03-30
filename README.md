@@ -7,5 +7,5 @@
 caculator.py 实现三角函数以及四则运算功能。
 caculator_GUI.py 实现计算器界面显示功能。
 
-！[lmage text]
+![lmage text]
 (Screenshots/6c5588673923dd47.png)
