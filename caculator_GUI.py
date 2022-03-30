@@ -3,7 +3,7 @@ import os,sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(BASE_DIR)
 
-from caculate import caculator
+from caculate import caculator   #导入计算模块（包含三角函数+四则运算功能）
 
 # 主窗口
 root = TK.Tk( )   #创建TK事例
