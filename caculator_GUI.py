@@ -47,7 +47,7 @@ def clear( ):
 # 按下等于号时计算结果
 def run( ):
     temp = equation.get( )
-    temp = temp.replace('x','*')  #为了方便调用caculator函数
+    temp = temp.replace('×','*')  #为了方便调用caculator函数
     temp = temp.replace('÷','/')
     temp = temp.replace('sin', '!')
     temp = temp.replace('cos', '@')
@@ -57,9 +57,9 @@ def run( ):
     temp = temp.replace('arct', '^')
     temp = temp.replace('Π', '180')
 
-    # 写一个小彩蛋，可以用于表白哦
+    # 写一个小彩蛋，CQUer！
     if temp == '王云;冯雪;苏舣;秦弦;袁慧敏':               # 暗号
-        result.set('现代软件工程，我爱你!')               # 彩蛋或者表白语
+        result.set('现代软件工程，我爱你!')               # 彩蛋
         return 0
     print(temp)
     answer = caculator.caculator(temp)
@@ -112,7 +112,7 @@ button_2 =TK.Button(root,text='2',bd=8,font=16,bg='dark gray', fg='black',comman
 button_2.place(x = '90',y='260',width = '60',height='40')
 button_3 =TK.Button(root,text='3',bd=8,font=16,bg='dark gray', fg='black',command= lambda : getnum('3'))
 button_3.place(x = '170',y='260',width = '60',height='40')
-button_multiplication =TK.Button(root,text='X',bd=8,font=16,bg='gray',fg='White',command= lambda : getnum('x'))
+button_multiplication =TK.Button(root,text='×',bd=8,font=16,bg='gray',fg='White',command= lambda : getnum('×'))
 button_multiplication.place(x = '250',y='260',width = '60',height='40')
 button_division =TK.Button(root,text='÷',bd=8,font=16,bg='gray',fg='White',command= lambda : getnum('÷'))
 button_division.place(x = '330',y='260',width = '60',height='40')
