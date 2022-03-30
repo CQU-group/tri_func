@@ -59,7 +59,7 @@ def remove_trigonometric(eq):  #去掉三角函数
             eq = change(eq, count - 1)
             return remove_trigonometric(eq)
         elif i == '#':
-          try:
+          # try:
            if eq[count + 1] != '-':
              if (int(float(eq[count+1] )+ 90) % 180 != 0):
                 eq[count] = math.tan(math.radians(float(eq[count + 1])))
@@ -77,9 +77,9 @@ def remove_trigonometric(eq):  #去掉三角函数
              else:
                  return remove_trigonometric(eq)
            return remove_trigonometric(eq)
-          except:
-             eq=None
-             print('error')
+          # except:
+          #    eq=None
+          #    print('error')
         elif i == '$':
             if eq[count + 1] != '-':
                 eq[count] = np.degrees(np.arcsin(float(eq[count + 1])))
