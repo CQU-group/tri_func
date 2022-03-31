@@ -4,7 +4,6 @@ import numpy as np
 from math import fabs
 from math import pi
 
-
 def eq_format(eq):
     '''
     :param eq: 输入的算式字符串
@@ -160,7 +159,6 @@ def remove_multiplication_division(eq):   #去掉乘除号
         eq = ("error")
     print('乘除计算eq', eq)
     return eq
-
 
 
 def remove_plus_minus(eq):   #去掉加减号
