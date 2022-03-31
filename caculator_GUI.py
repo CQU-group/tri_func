@@ -5,6 +5,7 @@ sys.path.append(BASE_DIR)
 
 from caculate import caculator
 
+
 # 主窗口
 root = TK.Tk( )   #创建TK事例
 root.title("CQU's Caculator")   #名称
