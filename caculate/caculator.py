@@ -4,6 +4,7 @@ import numpy as np
 from math import fabs
 from math import pi
 
+
 def eq_format(eq):
     '''
     :param eq: 输入的算式字符串
