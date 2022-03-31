@@ -5,7 +5,6 @@ sys.path.append(BASE_DIR)
 
 from caculate import caculator
 
-
 # 主窗口
 root = TK.Tk( )   #创建TK事例
 root.title("CQU's Caculator")   #名称
@@ -67,7 +66,6 @@ def run( ):
     #answer = '%.2f'%answer
     result.set(str(answer))
 
-
 # 结果显示框
 show_uresult = TK.Label(root,bg='white',fg = 'black',font = ('Arail','15'),bd='0',textvariable =equation,anchor='se')
 show_dresult = TK.Label(root,bg='white',fg = 'black',font = ('Arail','30'),bd='0',textvariable=result,anchor='se')
@@ -75,6 +73,7 @@ show_uresult.place(x='10',y='10',width='560',height='50')
 show_dresult.place(x='10',y='60',width='560',height='50')
 
 # 按钮
+
 # 第一行按钮
 button_7 =TK.Button(root,text='7',bd=8,font=16,bg='dark gray', fg='black',command= lambda : getnum('7'))
 button_7.place(x = '10',y='150',width = '60',height='40')
@@ -106,6 +105,7 @@ button_cos =TK.Button(root,text='cos',bd=8,font=16,bg='gray',fg='White',command=
 button_cos.place(x = '410',y='205',width = '60',height='40')
 button_arccos=TK.Button(root,text='arccos',bd=8,font=16,bg='gray',fg='White',command= lambda : getnum('arcc'))
 button_arccos.place(x = '490',y='205',width = '80',height='40')
+
 # 第三行按钮
 button_1 =TK.Button(root,text='1',bd=8,font=16,bg='dark gray', fg='black',command= lambda :getnum('1'))
 button_1.place(x = '10',y='260',width = '60',height='40')
@@ -121,6 +121,7 @@ button_tan =TK.Button(root,text='tan',bd=8,font=16,bg='gray',fg='White',command=
 button_tan.place(x = '410',y='260',width = '60',height='40')
 button_arctan =TK.Button(root,text='arctan',bd=8,font=16,bg='gray',fg='White',command= lambda : getnum('arct'))
 button_arctan.place(x = '490',y='260',width = '80',height='40')
+
 # 第四行按钮
 button_point =TK.Button(root,text='.',bd=8,font=16,bg='dark gray', fg='black',command= lambda : getnum('.'))
 button_point.place(x = '10',y='315',width = '60',height='40')
