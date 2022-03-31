@@ -1,0 +1,12 @@
+from test import MyTestCase
+from unittest import TestSuite, TextTestRunner
+
+suite = TestSuite()
+
+# suite.addTest(MyTestCase('test_base'))
+suite.addTest(MyTestCase('test_sin'))
+
+
+if __name__ == '__main__':
+    runner = TextTestRunner()
+    runner.run(suite)
