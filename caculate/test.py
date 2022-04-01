@@ -6,7 +6,7 @@ from caculator import caculator as cl
 import math
 
 
-test_number = 10000#测试次数
+test_number = 1000#测试次数
 
 class MyTestCase(TestCase):
 
@@ -135,6 +135,14 @@ class MyTestCase(TestCase):
             if result_calculator == "出现错误，请重新输入！":
                 print('x = ', x)
                 self.assertEqual(x % 180, 90, "tan角度功能，执行结果不正确")
+            else:
+                x = math.radians(x)
+                result_true = math.tan(x)
+                result_true = round(result_true, 8)
+                print('x = ', x)
+                print('result_calculator = ', result_calculator)
+                print('result_true = ', result_true)
+                self.assertEqual(result_calculator, result_true, "tan角度功能，执行结果不正确")
             # if (x % 180 != 90):
             #     x = math.radians(x)
             #     result_true = math.tan(x)
@@ -146,22 +154,22 @@ class MyTestCase(TestCase):
             #     print('result_true = ', result_true)
             # self.assertEqual(result_calculator, result_true, "tan角度功能，执行结果不正确")
 
-            # string1 = '#(x)'
-            # string1 = list(string1)
-            # string1[2] = x * 180
-            # equation1 = " ".join(map(str, string1))
-            #
-            # result_calculator = cl(equation1)
-            # if (x % 0.5 != 0):
-            #     result_true = math.tan(x * math.pi)
-            #     result_true = round(result_true, 8)
-            # else:
-            #     result_true = "出现错误，请重新输入！"
-            # print('x = ', x)
-            # print('result_calculator = ', result_calculator)
-            # print('result_true = ', result_true)
-            #
-            # self.assertEqual(result_calculator, result_true, "tan弧度功能，执行结果不正确")
+            string1 = '#(x)'
+            string1 = list(string1)
+            string1[2] = x * 180
+            equation1 = " ".join(map(str, string1))
+
+            result_calculator = cl(equation1)
+            if (x % 0.5 != 0):
+                result_true = math.tan(x * math.pi)
+                result_true = round(result_true, 8)
+            else:
+                result_true = "出现错误，请重新输入！"
+            print('x = ', x)
+            print('result_calculator = ', result_calculator)
+            print('result_true = ', result_true)
+
+            self.assertEqual(result_calculator, result_true, "tan弧度功能，执行结果不正确")
     def test_arcsin(self):  # 测试arcsin
 
         # 测试角度
