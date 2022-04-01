@@ -70,7 +70,7 @@ def remove_trigonometric(eq):  #去掉三角函数
              else:
                  return remove_trigonometric(eq)
            elif eq[count + 1] == '-':
-             if (int(float(eq[count+2])+ 90) % 180 != 0):
+             if (float(float(eq[count+2])+ 90) % 180 != 0):
                 eq[count] = math.tan(math.radians(-float(eq[count + 2])))
                 del (eq[count + 1])
                 del (eq[count + 1])
