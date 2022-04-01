@@ -11,18 +11,18 @@ test_number = 1000#测试次数
 
 list = []#随机输入
 
-        for i in range(32767):
-            list.append(i)
-        list.append('+')
-        list.append('-')
-        list.append('*')
-        list.append('/')
-        list.append('!')
-        list.append('@')
-        list.append('#')
-        list.append('$')
-        list.append('%')
-        list.append('^')
+for i in range(10):
+    list.append(i)
+list.append('+')
+list.append('-')
+list.append('*')
+list.append('/')
+list.append('!')
+list.append('@')
+list.append('#')
+list.append('$')
+list.append('%')
+list.append('^')
 
 class MyTestCase(TestCase):
 
@@ -241,7 +241,6 @@ class MyTestCase(TestCase):
 
             result_calculator = round(cl(equation1), 4)
 
-
             result_true = np.arctan(x)
             result_true = np.degrees(result_true)
             result_true = round(result_true, 4)
@@ -254,20 +253,19 @@ class MyTestCase(TestCase):
 
     def test_error(self):
 
-        test_list = []
         for i in range(test_number):
-            for j in range(random.randint(0,20)):
-                test_list.append(list[random.randint(0,23767)])
+            test_list = []
+            for j in range(random.randint(0,30)):
+                test_list.append(list[random.randint(0,19)])
+            equation1 = " ".join(map(str, test_list))
+
+            print('equation1 = ', equation1)
+            result_calculator = cl(equation1)
+
+            print('result_calculator = ', result_calculator)
 
 
-
-
-
-
-
-
-
-
+            self.assertEqual(result_calculator, "出现错误，请重新输入！", "报错功能，执行结果不正确")
 
 
 if __name__ == '__main__':
