@@ -15,5 +15,8 @@ ___Tig1.0___
 ![lmage](https://github.com/CQU-group/tri_func/tree/main/Screenshots/6c5588673923dd47.png)
 ![lmage](https://github.com/CQU-group/tri_func/tree/main/Screenshots/2.png)
 
-___Tig2.0___
+___Tig2.0___     
   工作2放置在 work2-Calculator 文件夹中。
+  主要文件说明：
+  caculator_GUI_2.0.py 实现计算器界面显示功能。
+  
