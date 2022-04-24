@@ -6,7 +6,7 @@ sys.path.append(BASE_DIR)
 from caculate_test import caculator   #  测试计算
 
 
-# i=0    # 全局参数
+i=0    # 全局参数
 
 # 主窗口
 root = TK.Tk( )   #创建TK事例
@@ -46,7 +46,7 @@ def clear( ):
     equation.set('0')
     result.set(' ')
 
-i=1   # 全局变量
+
 def Change():
     global i
     i += 1
@@ -56,19 +56,19 @@ def Change():
     else:
         temp = change.set("角度")
         temp11 = '角度'
-    print("i=",i,"三角函数进行",temp11,"计算")
+    print("i=",i,"三角函数进行",temp11,"计算")   # 通过run窗口观察计算运行情况
 
 def run( ):
     temp = equation.get( )
-    temp = temp.replace('×','*')  #为了方便调用caculator函数
-    temp = temp.replace('÷','/')
+    # temp = temp.replace('×','*')  #为了方便调用caculator函数
+    # temp = temp.replace('÷','/')   # 注销掉了，Tag 2.0 的计算模块没有实现这些功能！
     temp = temp.replace('sin', '!')
-    temp = temp.replace('cos', '@')
+    # temp = temp.replace('cos', '@')
     temp = temp.replace('tan', '#')
     temp = temp.replace('arcs', '$')
-    temp = temp.replace('arcc', '%')
+    # temp = temp.replace('arcc', '%')
     temp = temp.replace('arct', '^')
-    temp = temp.replace('Π', '180')
+    # temp = temp.replace('Π', '180')
 
     # 写一个小彩蛋，可以用于表白哦
     if temp == '王云;冯雪;苏舣;秦弦;袁慧敏':               # 暗号
