@@ -3,7 +3,7 @@ import os,sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(BASE_DIR)
 
-from caculate_test import caculator   #  测试计算
+import caculate   #  测试计算
 
 
 i=1    # 全局参数
@@ -87,9 +87,9 @@ def run( ):
     print("i=", i, '正在执行',temp2,'计算！')  # 通过run窗口观察计算运行情况
 
     if temp2 == "角度":
-        answer = caculator.caculator(temp)  # 计算角度
+        answer = caculate.caculator(temp)  # 计算角度
     else:
-        answer = caculator.caculator_2(temp)  # 计算弧度
+        answer = caculate.caculator_2(temp)  # 计算弧度
 
     #answer = '%.8f'%answer  # 保留小数位数
     result.set(str(answer))
