@@ -20,7 +20,7 @@
 .<img src="https://github.com/CQU-group/tri_func/tree/main/Screenshots/2.png" width="300" height="200" />
 
 # Tag 2.0:     
-  工作2放置在 work2-Calculator/ 文件夹中。       
+  工作2放置在 "work2-Calculator/" 文件夹中。       
   ### 【主要功能】      
   实现sin( )、cos( )、arcsin( )、arctan( ) 的弧度运算和角度运算。       
   
