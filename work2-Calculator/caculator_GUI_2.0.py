@@ -6,7 +6,7 @@ sys.path.append(BASE_DIR)
 from caculate_test import caculator   #  测试计算
 
 
-# i=1    # 全局参数
+i=1    # 全局参数
 
 # 主窗口
 root = TK.Tk( )   #创建TK事例
@@ -47,7 +47,7 @@ def clear( ):
     equation.set('0')
     result.set(' ')
 
-i=1   # 全局变量
+# i=1   # 全局变量
 # 实现三角函数计算 角度/弧度制 的转换
 def Change():
     global i
