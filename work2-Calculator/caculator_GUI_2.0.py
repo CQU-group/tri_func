@@ -141,7 +141,7 @@ button_3 =TK.Button(root,text='3',bd=8,font=16,bg='dark gray', fg='black',comman
 button_3.place(x = '170',y='260',width = '60',height='40')
 button_back =TK.Button(root,text='←',bd=8,font=16,bg='gray',fg='White',command=back)
 button_back.place(x = '250',y='260',width = '90',height='40')
-button_Change =TK.Button(root,text='Change',bd=8,font=16,bg='gray',fg='White',command=Change)
+button_Change =TK.Button(root,text='角度/弧度',bd=8,font=12,bg='gray',fg='White',command=Change)
 button_Change.place(x = '360',y='260',width = '90',height='40')
 
 
