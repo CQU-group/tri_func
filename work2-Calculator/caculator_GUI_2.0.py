@@ -6,13 +6,14 @@ sys.path.append(BASE_DIR)
 from caculate_test import caculator   #  测试计算
 
 
-i=0    # 全局参数
+# i=0    # 全局参数
 
 # 主窗口
 root = TK.Tk( )   #创建TK事例
 root.title("CQU's Caculator")   #名称
 root.resizable(0,0) #设置主窗口是否可以通过鼠标拉伸改变大小。此处设置为不能
 root.geometry('460x370')   #主窗口初试尺寸大小
+# root.geometry('400x370')
 
 result = TK.StringVar( )   #用来显示结果的可变文本
 equation = TK.StringVar( )   #用来显示算式的可变文本
@@ -36,17 +37,17 @@ def getnum(num):
     temp = temp + num
     equation.set( temp )
     print(equation)
-    
 # 按下退格键时，去除最后一个字符
 def back( ):
     temp = equation.get( )
     equation.set(temp[:-1])
-    
+
 # 按下AC时，清空算式行与结果行
 def clear( ):
     equation.set('0')
     result.set(' ')
 
+i=1   # 全局变量
 # 实现三角函数计算 角度/弧度制 的转换
 def Change():
     global i
@@ -57,20 +58,19 @@ def Change():
     else:
         temp = change.set("角度")
         temp11 = '角度'
-    print("i=",i,"三角函数进行",temp11,"计算")   # 通过run窗口观察计算运行情况
+    print("i=",i,"三角函数进行",temp11,"计算")  # 通过run窗口观察计算运行情况
 
-# 调用计算模块，实现三角函数的计算，并将结果显示在界面    
 def run( ):
     temp = equation.get( )
     # temp = temp.replace('×','*')  #为了方便调用caculator函数
-    # temp = temp.replace('÷','/')   # 注销掉了，Tag 2.0 的计算模块没有实现这些功能！
+    # temp = temp.replace('÷','/')
     temp = temp.replace('sin', '!')
-    # temp = temp.replace('cos', '@')
-    temp = temp.replace('tan', '#')
+    temp = temp.replace('cos', '@')
+    # temp = temp.replace('tan', '#')
     temp = temp.replace('arcs', '$')
     # temp = temp.replace('arcc', '%')
     temp = temp.replace('arct', '^')
-    # temp = temp.replace('Π', '180')
+    # temp = temp.replace('Π', '180')   Tag2.0 提供的计算模块没有实现这些功能
 
     # 写一个小彩蛋，可以用于表白哦
     if temp == '王云;冯雪;苏舣;秦弦;袁慧敏':               # 暗号
@@ -84,7 +84,7 @@ def run( ):
     else:
         temp2 = "角度"
 
-    print("i=", i, '正在执行',temp2,'计算！')   # 通过run窗口观察计算运行情况
+    print("i=", i, '正在执行',temp2,'计算！')  # 通过run窗口观察计算运行情况
 
     if temp2 == "角度":
         answer = caculator.caculator(temp)  # 计算角度
@@ -99,7 +99,7 @@ show_change = TK.Label(root,bg='white',fg = 'green',font = ('Arail','12'),bd='0'
 show_uresult = TK.Label(root,bg='white',fg = 'black',font = ('Arail','15'),bd='0',textvariable = equation,anchor='se')  # 显示输入
 show_dresult = TK.Label(root,bg='white',fg = 'black',font = ('Arail','25'),bd='0',textvariable=result,anchor='se')  # 显示结果
 
-show_change.place(x='10',y='10',width='40',height='50')   # 界面大小设置
+show_change.place(x='10',y='10',width='40',height='50')
 show_uresult.place(x='50',y='10',width='400',height='50')
 show_dresult.place(x='10',y='60',width='440',height='50')
 
@@ -156,6 +156,10 @@ button_AC =TK.Button(root,text='AC',bd=8,font=16,bg='maroon',fg='White',command 
 button_AC.place(x = '250',y='315',width = '90',height='40')
 button_FX =TK.Button(root,text='Tag2.0',bd=8,font=16,bg='gray',fg='White',command = lambda : getnum('王云;冯雪;苏舣;秦弦;袁慧敏'))
 button_FX.place(x = '360',y='315',width = '90',height='40')
+
+
+
+
 
 
 root.mainloop( )
