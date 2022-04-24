@@ -15,11 +15,9 @@
   caculator.py 实现三角函数以及四则运算功能。    （存放于 "tri_func/caculate/" 文件夹中）           
   caculator_GUI.py 实现计算器界面显示功能。     （存放于 "tri_func/" 文件夹中）     
      
-### 【效果图展示】     
-![lmage](https://github.com/CQU-group/tri_func/tree/main/Screenshots/6c5588673923dd47.png)
-![lmage](https://github.com/CQU-group/tri_func/tree/main/Screenshots/2.png)    
- 
-.<img src="https://github.com/CQU-group/tri_func/tree/main/Screenshots/2.png" width="300" height="150" />
+### 【效果图展示】         
+.<img src="https://github.com/CQU-group/tri_func/tree/main/Screenshots/6c5588673923dd47.png" width="300" height="180" />
+.<img src="https://github.com/CQU-group/tri_func/tree/main/Screenshots/2.png" width="300" height="180" />
 
 # Tag 2.0:     
   工作2放置在 work2-Calculator/ 文件夹中。       
