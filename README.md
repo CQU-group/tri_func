@@ -28,8 +28,7 @@
   实现sin( )、cos( )、arcsin( )、arctan( ) 的弧度运算和角度运算。       
   
   ### 【主要文件说明】              
-  * caculator_GUI_2.0.py 界面模块。实现计算器界面显示功能。   （存放于 "tri_func/work2-Calculator/caculator_GUI_2.0.py" 文件夹中）
-  * test.py 测试模块。用于测试代码的运行    
+  * caculator_GUI_2.0.py 界面模块。实现计算器界面显示功能。   （存放于 "tri_func/work2-Calculator/caculator_GUI_2.0.py" 文件夹中）    
   
   ### 【效果图展示】 
   
