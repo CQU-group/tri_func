@@ -1,0 +1,17 @@
+from test import MyTestCase
+from unittest import TestSuite, TextTestRunner
+
+suite = TestSuite()
+
+# suite.addTest(MyTestCase('test_base'))
+# suite.addTest(MyTestCase('test_sin'))
+# suite.addTest(MyTestCase('test_cos'))
+# suite.addTest(MyTestCase('test_tan'))
+suite.addTest(MyTestCase('test_arcsin'))
+# suite.addTest(MyTestCase('test_arccos'))
+# suite.addTest(MyTestCase('test_arctan'))
+# suite.addTest(MyTestCase('test_aerror'))
+
+if __name__ == '__main__':
+    runner = TextTestRunner()
+    runner.run(suite)
